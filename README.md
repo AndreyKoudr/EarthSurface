@@ -8,7 +8,7 @@ and save it as an STL file.
 
   Compiler
   --------
-  VS 2019, C++, without Windows specifics.
+  VS 2019, C++, without Windows specifics except <I>URLDownloadToFile()</I>.
 
   Third-party
   -----------
