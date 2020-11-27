@@ -19,7 +19,7 @@ the second contains water body contours which are  much more accurate.
   I wrote visualisation of Earth surface in marine simulators before and
 ran into the problem : when a ship is in water on charts visuals may show that
 it is aground. This was caused by inaccuracy of HGT data, so I had to improve it by 
-correcting the data by a constrained deformation algorithmm described in the <I>Documents</I>
+correcting the data by a constrained free form deformation algorithm (FFD) described in the <I>Documents</I>
 folder. It changes HGT file data to conform to real water shore lines.
 
   The HGT files are zipped and ESRI files are zipped as well (three files in a zip). A HGT
