@@ -9,13 +9,9 @@ and save it as an STL file.
   --------
   VS 2019, C++, without Windows specifics except <I>URLDownloadToFile()</I>.
 
-  Third-party
-  -----------
-  zip library only to unzip downloaded files.
-
   How it works
   ------------
-  The program loads an SRTM height file with its lower left corner defined by
+  The program downloads an SRTM height file with its lower left corner defined by
 latitude/longitude into HGTFile class and water body data into ESRIFile class.
 The first class contains Earth surface elevations with some 100x100 metres resolution,
 the second contains water body contours which are  much more accurate.
@@ -67,4 +63,41 @@ which must be writable.
     >GeoArea -23 -43 -> OK, Rio de Janeiro, mountains and water
     >GeoArea -24 -43 -> OK, mostly water
     >GeoArea -25 -43 -> OK, no land, exit by 1, no STL generated
+    
+  Third-party
+  -----------
+  zip library only to unzip downloaded files. Readme and licence are inside zlib-win64 directory.
+  
+  <I>
+   (C) 1995-2012 Jean-loup Gailly and Mark Adler
+
+  This software is provided 'as-is', without any express or implied
+  warranty.  In no event will the authors be held liable for any damages
+  arising from the use of this software.
+
+  Permission is granted to anyone to use this software for any purpose,
+  including commercial applications, and to alter it and redistribute it
+  freely, subject to the following restrictions:
+
+  1. The origin of this software must not be misrepresented; you must not
+     claim that you wrote the original software. If you use this software
+     in a product, an acknowledgment in the product documentation would be
+     appreciated but is not required.
+  2. Altered source versions must be plainly marked as such, and must not be
+     misrepresented as being the original software.
+  3. This notice may not be removed or altered from any source distribution.
+
+  Jean-loup Gailly        Mark Adler
+  jloup@gzip.org          madler@alumni.caltech.edu
+
+If you use the zlib library in a product, we would appreciate *not* receiving
+lengthy legal documents to sign.  The sources are provided for free but without
+warranty of any kind.  The library has been entirely written by Jean-loup
+Gailly and Mark Adler; it does not include third-party code.
+
+If you redistribute modified sources, we would appreciate that you include in
+the file ChangeLog history information documenting your changes.  Please read
+the FAQ for more information on the distribution of modified source versions.
+</I>
+
 
