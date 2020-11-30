@@ -11,13 +11,12 @@ and save it as an STL file.
 
   How it works
   ------------
-  The program downloads an SRTM height file with its lower left corner defined by
-latitude/longitude into HGTFile class and water body data into ESRIFile class.
-The first class contains Earth surface elevations with some 100x100 metres resolution,
+  The program downloads an SRTM height file into HGTFile class and water body data into ESRIFile class.
+The first class contains Earth surface elevations with ~100x100 metres resolution,
 the second contains water body contours which are  much more accurate.
 
   I wrote visualisation of Earth surface in marine simulators before and
-ran into the problem : when a ship is in water on charts visuals may show that
+ran into a problem : when a ship is in water on charts visuals may show that
 it is aground. This was caused by inaccuracy of HGT data, so I had to improve it by 
 correcting the data by a constrained free form deformation algorithm (FFD) described in the <I>Documents</I>
 folder. It changes HGT file data to conform to real water shore lines.
@@ -25,7 +24,8 @@ folder. It changes HGT file data to conform to real water shore lines.
   The HGT files are zipped and ESRI files are zipped as well (three files in a zip). A HGT
 file structure is simple - it contains 1201 x 1201 elevation points in 2-byte signed integers.
 An ESRI file is more compilicated - a zip contains three files. The ESRIFile class extracts
-this data into groups of points organised as lat,lon and height.
+this data into groups of points organised as lat,lon and height. Each file covers area of
+1 x 1 degree and is named after lat/lon of its lower left corner.
 
   The current code <B>does not reproduce underwater geometry</B> as it would require another ETOPO1
 data which is not accessible by loading files, but only via user interface. I downloaded it
