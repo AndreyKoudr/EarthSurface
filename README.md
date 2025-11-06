@@ -1,5 +1,8 @@
 # EarthSurface
 
+  Note : there is no free access to SRTM data anymore, it requires registration, so HGT files are not directly loaded from the code as before. Sorry.
+  ---------------------------------------------------------------------------------------------------------------------------------------------------
+
   Earth surface geometry (elevation)
   ----------------------------------
   This is an example how to load and correct any Earth surface geometry from SRTM data
